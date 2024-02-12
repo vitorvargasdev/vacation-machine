@@ -20,6 +20,7 @@ systemctl enable docker
 usermod -aG docker $USER
 
 echo -e "$PWD\n$PWD" | passwd $USER
+echo -e "$PWD\n$PWD" | passwd root
 
 cp /etc/sudoers /etc/sudoers.bkp
 
