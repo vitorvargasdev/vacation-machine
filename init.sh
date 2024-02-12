@@ -27,7 +27,7 @@ echo "$USER ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 cp /tmp/dev.zip /home/$USER/dev.zip
 chown $USER /home/$USER/dev.zip
-su $USER -c "unzip /home/$USER/dev.zip"
+su $USER -c "cd /home/$USER && unzip /home/$USER/dev.zip"
 rm /home/$USER/dev.zip
 su $USER -c "chown -R $USER /home/$USER/dev"
 

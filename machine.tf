@@ -28,12 +28,16 @@ resource "linode_instance" "work_instance" {
   }
 
   provisioner "local-exec" {
-    command = "rm -rf dev.zip && zip -r dev.zip dev"
+    command = "zip -r dev.zip dev"
   }
 
   provisioner "file" {
     source      = "dev.zip"
     destination = "/tmp/dev.zip"
+  }
+
+  provisioner "local-exec" {
+    command = "rm -rf dev.zip"
   }
 
   provisioner "file" {
