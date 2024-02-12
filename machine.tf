@@ -28,7 +28,7 @@ resource "linode_instance" "work_instance" {
   }
 
   provisioner "local-exec" {
-    command = "chmod +x zip-files.sh && ./zip-files.sh"
+    command = "zip -r dev.zip dev -x \\*node_modules\\*"
   }
 
   provisioner "file" {

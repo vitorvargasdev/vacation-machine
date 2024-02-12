@@ -1,1 +1,0 @@
-zip -r dev.zip dev -x \*node_modules\*
