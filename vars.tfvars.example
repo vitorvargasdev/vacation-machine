@@ -1,0 +1,9 @@
+linode_token = ""
+linode_region = "us-mia"
+linode_image = "linode/arch"
+linode_type = "g6-nanode-1"
+linode_root_pass = ""
+linode_authorized_users = [""]
+linode_private_ip = true
+linode_user = ""
+linode_pass = ""

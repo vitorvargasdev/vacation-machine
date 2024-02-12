@@ -1,0 +1,5 @@
+vars.tfvars
+dev/*
+dev.zip
+.terraform*
+terraform*
