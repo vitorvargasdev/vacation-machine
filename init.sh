@@ -9,7 +9,7 @@ reflector --latest 5 \
   --save "/etc/pacman.d/mirrorlist" \
   --sort rate
 
-pacman -Syu --noconfirm base base-devel sudo zip unzip docker docker-compose go
+pacman -Syu --noconfirm base base-devel sudo zip unzip docker docker-compose git go
 
 useradd -m -g users -G wheel $USER
 
@@ -20,8 +20,6 @@ systemctl enable docker
 usermod -aG docker $USER
 
 echo -e "$PWD\n$PWD" | passwd $USER
-
-pacman -S --noconfirm git
 
 cp /etc/sudoers /etc/sudoers.bkp
 
