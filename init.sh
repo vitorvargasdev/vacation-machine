@@ -29,6 +29,7 @@ cp /tmp/dev.zip /home/$USER/dev.zip
 chown $USER /home/$USER/dev.zip
 su $USER -c "unzip /home/$USER/dev.zip"
 rm /home/$USER/dev.zip
+su $USER -c "chown -R $USER /home/$USER/dev"
 
 su $USER -c "cd /home/$USER && mkdir -p /home/$USER/pkgs && cd /home/$USER/pkgs"
 su $USER -c "cd /home/$USER/pkgs && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm"
