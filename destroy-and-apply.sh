@@ -1,0 +1,1 @@
+tofu destroy -auto-approve -var-file="vars.tfvars" && tofu plan && tofu apply -auto-approve -var-file="vars.tfvars"
